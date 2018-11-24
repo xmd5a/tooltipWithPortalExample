@@ -15,6 +15,7 @@ class TooltipWrapper extends PureComponent {
   }
 
   componentDidMount() {
+    // bind events
     this.bindEvents();
   }
 
@@ -25,9 +26,18 @@ class TooltipWrapper extends PureComponent {
   bindEvents() {
     React.Children.forEach(this.props.children, (child) => {
       this.element = findDOMNode(this.refs[this.elementRef]);
-      this.element.addEventListener('mouseenter', this.toggleTooltip);
+      this.element.addEventListener('mouseenter', this.calculatePositions);
       this.element.addEventListener('mouseleave', this.toggleTooltip);
     });
+  }
+
+  calculatePositions = () => {
+    // here you can add your own calculate algorithm
+    console.log('calculate me!');
+    console.log(this.element);
+
+    // show tooltip
+    this.toggleTooltip();
   }
 
   toggleTooltip = () => this.setState({

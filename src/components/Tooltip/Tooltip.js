@@ -6,9 +6,6 @@ class Tooltip extends PureComponent {
     super(props);
   }
 
-  componentDidMount() {
-  }
-
   render() {
     const tooltip = this.props.isVisible && <Portal>
       <span className="ds-tooltip">{this.props.children}</span>
