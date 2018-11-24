@@ -1,0 +1,21 @@
+body,
+html {
+    position: relative;
+    padding: 40px;
+}
+
+.wrapper {
+    display: block;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.ds-tooltip {
+    position: fixed;
+    text-align: center;
+    display: block;
+    width: 200px;
+    border: 1px solid #000;
+    background: #000;
+    color: #ccc;
+}
