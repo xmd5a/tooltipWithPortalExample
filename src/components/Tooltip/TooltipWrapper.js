@@ -40,9 +40,11 @@ class TooltipWrapper extends PureComponent {
     this.toggleTooltip();
   }
 
-  toggleTooltip = () => this.setState({
-    isVisible: !this.state.isVisible
-  });
+  toggleTooltip = () => {
+    this.setState({
+      isVisible: !this.state.isVisible
+    });
+  }
 
   // clone element because we need to add refs
   addRefToElement(element) {
